@@ -4,13 +4,13 @@ while  [ "1" = "1" ]
 do
     read -p "please input a number :" n
     if [ -z $n ];then
-        echo "$n not a number"
+        echo "$n 不是一个数字"
         continue
     else
        if [ -n "`echo $n | sed 's/[0-9]//g'`" ] ;then
-           echo "$n 不是是数字"
+           echo "$n 不是纯数字"
        else
-          echo "$n 是纯数字"
+#          echo "$n 是纯数字"
           break
        fi
 
@@ -25,7 +25,18 @@ echo -n " "
 done
 for b in `seq $i`
 do 
-echo -n "*"
+echo -n "* "
+
 done
+echo
+done
+n=$[$n-2]
+for i in `seq $n`
+do
+for i in `seq $n`
+do
+   echo -n ' '
+done
+echo -n "***"
 echo
 done
